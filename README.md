@@ -1,5 +1,5 @@
 # Order Entry Syem
-Sample Angular 2 based application for learning purpose.
+Sample Angular 2 based application for learning purpose only (beginners).
 ### Tech
 This project uses a number of open source projects to work properly:
 
