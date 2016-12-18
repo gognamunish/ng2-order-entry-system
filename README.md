@@ -6,9 +6,9 @@ This project uses a number of open source projects to work properly:
 * [AngularJS] - HTML enhanced for web apps!
 * [Spring Boot] - Awesome boot framework
 * [Spring Data] - We are using JPA repository
-* [Spring Security] - Just for basic authentoication
+* [Spring Security] - Just for basic authentication
 * [HSQL] - Embedded database.
-* [Ng Material] - material Design components for Angular 2
+* [Ng Material] - Material Design components for Angular 2
 * [Rest Assured] - Testing and validating REST services 
 
 ### Installation
@@ -16,6 +16,8 @@ This project uses a number of open source projects to work properly:
 Running Backend Module (OES-service)
 ```
 java com.gognamunish.learning.OesApplication
+
+-- All services by default are running on port 8080 http://localhost:8080/api/order
 ```
 Running Frontend Module (OES-web)
 ```
@@ -36,13 +38,19 @@ npm start
 Basic Authentication:
   - User: munish
   - Password: s3cr3t
+  
+### Screenshots
+
+1. Order List
+
+![Alt text](order_entry_system/OES-web/src/images/list.png?raw=true "Order List")  
 
 ### Todos
 
- - Extend and add more use cases
+ - Extend and add more use cases and components
  
    [Spring Boot]: <https://projects.spring.io/spring-boot/>
-   [Spring Data]: <hhttp://projects.spring.io/spring-data/>
+   [Spring Data]: <http://projects.spring.io/spring-data/>
    [Spring Security]: <https://projects.spring.io/spring-security/>
    [HSQL]: <http://hsqldb.org/>
    [Ng Material]: <https://github.com/angular/material2>
