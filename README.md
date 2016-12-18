@@ -42,8 +42,7 @@ Basic Authentication:
 ### Screenshots
 
 1. Order List
-
-![Alt text](order_entry_system/OES-web/src/images/list.png?raw=true "Order List")  
+order_entry_system/blob/master/OES-web/src/images/list.png 
 
 ### Todos
 
