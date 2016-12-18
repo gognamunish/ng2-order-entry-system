@@ -1,0 +1,18 @@
+<div>
+  <md-toolbar color="primary">
+    <span>
+      <md-icon class="icon-20">pages</md-icon>
+      Order Entry System
+    </span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Help</button>
+    <button md-menu-item>Logout</button>
+  </md-menu>
+  
+<dashboard></dashboard>
+
+</div>

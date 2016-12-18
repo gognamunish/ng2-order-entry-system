@@ -1,0 +1,106 @@
+
+ 
+ <md-sidenav-layout>
+    <md-sidenav align="end" mode="side" #sidenav>
+
+
+   <h6> Edit Order Details (ID:{{currentOrder.orderId}})</h6>
+  <form [formGroup]="orderForm"  (ngSubmit)="save(orderForm.value)">
+    <table>
+       <tbody>
+         
+        <tr>
+           <td>Price</td> <td> <input type="number" name="price" formControlName="price" required></td>
+        </tr>
+        <tr>
+           <td>Quantity</td> <td>  <input type="text" name="quantity" formControlName="quantity" required></td>
+        </tr>
+        <tr>
+           <td>Currency</td> <td> <input type="text" name="currency" formControlName="currency" required></td>
+        </tr>
+        <tr>
+           <td>Symbol</td> <td> <input type="text" name="symbol" formControlName="symbol" required></td>
+        </tr>
+        <tr>
+           <td>Ordered By</td> <td>  <input type="text" name="createdBy" formControlName="createdBy" required></td>
+        </tr>
+      </tbody>
+    </table> 
+    
+    <button md-raised-button  type="submit"  color="accent">Update</button>
+
+  </form>
+    </md-sidenav>
+ 
+<md-tab-group selectChange="clearCurrentOrder()">
+  <md-tab label="Recent Orders">
+
+<table>
+  <thead>
+<tr>
+<td>Order Id</td>
+<td>Symbol</td>
+<td>Price</td>
+<td>Currency</td>
+<td>Quantity</td>
+<td>Status</td>
+<td>Created By</td>
+<td>Created On</td>
+<td>Actions</td>
+</tr>
+  </thead>
+<tr *ngFor="let order of orders">
+  <td> {{order.orderId}}</td>
+  <td>{{order.symbol}}</td>
+  <td>{{order.price}}</td>
+  <td>{{order.currency}}</td>
+  <td>{{order.quantity}}</td>
+  <td>{{order.status}}</td>
+  <td>{{order.createdBy}}</td>
+  <td>{{order.createdOn}}</td>
+  <td>
+
+  
+<button md-icon-button (click)="editOrder(order)" color="blue" title="Edit Details"> <md-icon>edit</md-icon></button>
+<button md-icon-button (click)="openDeleteDialog(order)" color="blue" title="Delete Details"> <md-icon>cancel</md-icon></button>
+<button md-icon-button (click)="submitOrder(order)" color="blue" title="Submit Details"> <md-icon>check</md-icon></button>
+
+  </td>
+
+</tr>
+</table>
+
+  </md-tab>
+  <md-tab label="Place Order" >
+   
+
+
+  <form [formGroup]="orderForm"  (ngSubmit)="save(orderForm.value)">
+  <label>Symbol:</label>
+  <input type="text" name="symbol" formControlName="symbol" required>
+
+  <label>Price:</label>
+  <input type="number" name="price" formControlName="price" required>
+
+  <label>Currency:</label>
+  <input type="text" name="currency" formControlName="currency" required>
+
+  <label>Quantity:</label>
+  <input type="number" name="quantity" formControlName="quantity" required>
+
+  <label>Date:</label>
+  <input type="date" name="createdOn" formControlName="createdOn" required>
+
+
+  <button md-raised-button color="accent" type="submit" >Submit</button>
+  </form>
+
+
+
+
+  </md-tab>
+</md-tab-group>
+
+
+
+  </md-sidenav-layout>
