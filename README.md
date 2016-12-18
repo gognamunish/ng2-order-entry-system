@@ -23,14 +23,14 @@ Running Frontend Module (OES-web)
 ```
 npm install
 npm start
-
 ```
 
 ### Accessing UI
 
 http://localhost:4200/
 
-(in case services are running on different port (other than 8080), please update proxy.config.json)
+All API Requests to routed as follow /api/** -> http://localhost:8080
+If your services are running on a different port (other than 8080), please update proxy.config.json
 
 # Use Cases
 
