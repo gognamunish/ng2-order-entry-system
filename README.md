@@ -42,7 +42,13 @@ Basic Authentication:
 ### Screenshots
 
 1. Order List
-order_entry_system/blob/master/OES-web/src/images/list.png 
+![alt tag](https://github.com/gognamunish/order_entry_system/blob/master/OES-web/src/images/list.png)
+
+2. Update Order
+![alt tag](https://github.com/gognamunish/order_entry_system/blob/master/OES-web/src/images/update.png)
+
+3. Create Order
+![alt tag](https://github.com/gognamunish/order_entry_system/blob/master/OES-web/src/images/create.png)
 
 ### Todos
 
